@@ -1,0 +1,13 @@
+# Casos de Teste – Swag Labs (saucedemo.com)
+
+| ID | Título | Pré-condições | Passos | Resultado esperado |
+|---|---|---|---|---|
+| CT-LOGIN-001 | Login com credenciais válidas | Usuário existe (standard_user/secret_sauce) | 1. Navegar até a página de login. 2. Informar usuário válido. 3. Informar senha válida. 4. Clicar em "Login". | Deve redirecionar para a página de inventário com lista de produtos e mensagem de boas-vindas. |
+| CT-LOGIN-002 | Login com senha inválida | Usuário existe | 1. Navegar até a página de login. 2. Informar usuário válido. 3. Informar senha incorreta. 4. Clicar em "Login". | Deve exibir mensagem de erro "Username and password do not match any user in this service." |
+| CT-LOGIN-003 | Login com campos vazios | Nenhuma | 1. Navegar até a página de login. 2. Deixar campo Usuário em branco. 3. Deixar campo Senha em branco. 4. Clicar em "Login". | Deve exibir mensagem de erro "Username is required". |
+| CT-CART-001 | Adicionar item ao carrinho | Usuário autenticado | 1. Na página de inventário, clicar em "Add to cart" para um produto. | O botão deve mudar para "Remove" e o ícone do carrinho deve exibir a contagem "1". |
+| CT-CART-002 | Remover item do carrinho | Usuário autenticado com item no carrinho | 1. Na página de inventário, clicar em "Remove" para o item adicionado. | O botão deve voltar para "Add to cart" e a contagem do carrinho deve ser zero. |
+| CT-CART-003 | Remover item na página de carrinho | Usuário autenticado com item no carrinho | 1. Acessar o carrinho. 2. Clicar em "Remove" ao lado do item. | A lista do carrinho deve ficar vazia e a contagem de itens no ícone deve ser zero. |
+| CT-CHECKOUT-001 | Checkout com carrinho vazio | Usuário autenticado com carrinho vazio | 1. Acessar o carrinho sem itens. 2. Clicar em "Checkout". | O sistema não deve permitir avançar; deve exibir mensagem ou desabilitar o botão. |
+| CT-CHECKOUT-002 | Checkout sem preencher dados pessoais | Usuário autenticado com item no carrinho | 1. Adicionar um item ao carrinho. 2. Acessar o carrinho. 3. Clicar em "Checkout". 4. Deixar campos First Name, Last Name e Zip em branco. 5. Clicar em "Continue". | Deve exibir mensagem de erro ("First Name is required") e não prosseguir. |
+| CT-CHECKOUT-003 | Checkout completo com dados válidos | Usuário autenticado com item no carrinho | 1. Adicionar item ao carrinho e prosseguir para "Checkout". 2. Informar First Name, Last Name e Zip Code válidos. 3. Clicar em "Continue". 4. Verificar resumo da compra e clicar em "Finish". | Deve mostrar mensagem de sucesso ("Thank you for your order!") e limpar o carrinho após a finalização. |
