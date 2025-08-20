@@ -1,0 +1,19 @@
+# Casos de Teste – DemoQA (demoqa.com)
+
+| ID | Título | Pré‑condições | Passos | Resultado esperado |
+|---|---|---|---|---|
+| **CT‑TEXT‑001** | Submeter formulário Text Box com dados válidos | Usuário na página **Text Box** | 1. Preencher **Full Name** com "João da Silva". 2. Preencher **Email** com "joao@exemplo.com". 3. Preencher **Current Address** e **Permanent Address** com textos. 4. Clicar em **Submit**. | Deve exibir abaixo do formulário um quadro contendo os mesmos dados informados (Name, Email, Current Address e Permanent Address). |
+| **CT‑TEXT‑002** | Validar e‑mail inválido no Text Box | Usuário na página **Text Box** | 1. Preencher **Full Name**. 2. Inserir em **Email** um valor sem "@" (ex.: "joaoexemplo.com"). 3. Preencher demais campos. 4. Clicar em **Submit**. | O campo de e‑mail deve indicar erro (borda vermelha ou mensagem) e não deve exibir o quadro de saída com os dados até que um e‑mail válido seja informado. |
+| **CT‑CHECK‑001** | Selecionar item na Check Box | Usuário na página **Check Box** | 1. Expandir a árvore clicando na seta ao lado de **Home**. 2. Expandir **Desktop** e selecionar a caixa **Notes**. | A caixa **Notes** e seus pais (Desktop, Home) devem ficar marcados e a lista de seleções exibida abaixo deve conter "notes". |
+| **CT‑RADIO‑001** | Selecionar opção "Yes" no Radio Button | Usuário na página **Radio Button** | 1. Clicar na opção **Yes**. | A mensagem "You have selected Yes" deve ser exibida abaixo das opções. |
+| **CT‑RADIO‑002** | Selecionar opção "Impressive" no Radio Button | Usuário na página **Radio Button** | 1. Clicar na opção **Impressive**. | Deve exibir a mensagem "You have selected Impressive". |
+| **CT‑WEB‑001** | Adicionar registro em Web Tables | Usuário na página **Web Tables** | 1. Clicar em **Add**. 2. Preencher o formulário (First Name, Last Name, Email, Age, Salary, Department). 3. Clicar em **Submit**. | O novo registro deve aparecer na tabela com os dados informados. |
+| **CT‑WEB‑002** | Editar registro em Web Tables | Existe um registro na tabela | 1. Clicar no ícone de **edição** (lápis) do registro. 2. Alterar algum campo (ex.: Salary). 3. Clicar em **Submit**. | A tabela deve refletir as alterações realizadas. |
+| **CT‑BTN‑001** | Double Click Button | Usuário na página **Buttons** | 1. Realizar **duplo clique** sobre o botão **Double Click Me**. | Deve aparecer a mensagem "You have done a double click". |
+| **CT‑BTN‑002** | Right Click Button | Usuário na página **Buttons** | 1. Clicar com o botão direito no botão **Right Click Me**. | Deve aparecer a mensagem "You have done a right click". |
+| **CT‑LINK‑001** | Acessar link "Home" | Usuário na página **Links** | 1. Clicar no link **Home**. | Deve abrir uma nova guia do navegador com a página inicial do DemoQA. |
+| **CT‑LINK‑002** | Verificar link quebrado | Usuário na página **Broken Links – Images** | 1. Clicar em **Click Here for Broken Link**. | O navegador deve exibir uma página de erro 404 ou mensagem de página não encontrada, indicando link quebrado. |
+| **CT‑UPLOAD‑001** | Upload de arquivo | Usuário na página **Upload and Download** | 1. Clicar em **Choose File**. 2. Selecionar um arquivo válido (.txt ou .jpg). | O nome do arquivo selecionado deve aparecer ao lado do campo de upload. |
+| **CT‑UPLOAD‑002** | Download de arquivo | Usuário na página **Upload and Download** | 1. Clicar em **Download**. | O navegador deve iniciar o download do arquivo especificado. |
+| **CT‑DYN‑001** | Verificar habilitação tardia | Usuário na página **Dynamic Properties** | 1. Observar o botão **Will enable 5 seconds**. 2. Aguardar 5 segundos. | O botão deve mudar seu estado para habilitado após 5 segundos. |
+| **CT‑DYN‑002** | Verificar mudança de cor | Usuário na página **Dynamic Properties** | 1. Observar o botão **Color Change**. 2. Aguardar 5 segundos. | A cor do botão deve mudar após o tempo especificado. |
