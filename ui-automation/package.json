@@ -1,0 +1,13 @@
+{
+  "name": "ui-automation-swaglabs",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  },
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  }
+}
